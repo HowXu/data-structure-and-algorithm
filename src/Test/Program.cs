@@ -12,11 +12,16 @@ class Program
         Console.WriteLine("二分查找法结果: {0}", A1BinarySearch.binarySearch(arr, 0));
 
         Person[] persons = [new Person(10, "a"), new Person(12, "b"), new Person(13, "c")];
-        
+
         ArrayList<Person> arrayList = new(3, persons); // 逆天写法
         arrayList.Insert(0, new Person(8, "as"));
         Console.WriteLine(arrayList.size);
         Console.WriteLine(arrayList.ToString());
+        arrayList.Remove(0);
+        Console.WriteLine(arrayList.size);
+        Console.WriteLine(arrayList.ToString());
+        Console.WriteLine(arrayList.Get(1).ToString());
+        Console.WriteLine(arrayList.IndexOf(new Person(13, "c")));
     }
 
     class Person
@@ -30,8 +35,18 @@ class Program
             this.name = name;
         }
 
-        public override String ToString(){
+        public override String ToString()
+        {
             return name;
+        }
+        public override bool Equals(object? obj)
+        {
+            if (obj is not null)
+            {
+                return ((Person)obj).name.Equals(name);
+            }
+            return false;
+
         }
     }
 }
