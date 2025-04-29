@@ -122,7 +122,7 @@ public class ArrayList<T>
         // 循环来找实在是没有性能我说实话 这里应该有更好的办法
         for(int i=0;i < size;i++){
             // 考虑到T可能塞了null值进去 这里判断一下
-            if(inner_array![i] is not null &&inner_array![i].Equals(target)){
+            if(inner_array![i] is not null && inner_array![i].Equals(target)){
                 return i;
             }
         }

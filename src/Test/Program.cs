@@ -22,6 +22,27 @@ class Program
         Console.WriteLine(arrayList.ToString());
         Console.WriteLine(arrayList.Get(1).ToString());
         Console.WriteLine(arrayList.IndexOf(new Person(13, "c")));
+
+        LinkedList<Person> linkedList = new(persons);
+        Console.WriteLine(linkedList.ToString());
+        linkedList.Insert(0,new Person(10, "0 insert"));
+        // 0i a b c
+        linkedList.Insert(3, new Person(10, "3 insert"));
+        // 0i a b 3i c
+        linkedList.Insert(2, new Person(10, "2 insert"));
+        // 0i a 2i b 3i c
+        Console.WriteLine(linkedList.ToString());
+
+        linkedList.Add(new Person(10, "Add"));
+        Console.WriteLine(linkedList.ToString());
+
+        linkedList.Remove(0);
+        // a 2i b 3i c add
+        linkedList.Remove(5);
+        // a 2i b 3i c
+        linkedList.Remove(3);
+        // a 2i b c
+        Console.WriteLine(linkedList.ToString());
     }
 
     class Person
