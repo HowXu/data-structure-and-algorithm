@@ -150,6 +150,46 @@ public class LinkedList<T> where T : class?
         size--;
     }
 
+    // 返回对应索引的元素 这个返回可能是空值的
+    public T? Get(int index)
+    {
+        Node tmp = Get_index_before_Node(index);
+        return tmp.next!.element;
+    }
+
+    // 查找元素所在位置
+    public int IndexOf(T? element)
+    {
+        bool get_null_switch = element is null;
+        int tmp_index = 0;
+        // 这里就直接拿着head.next开始向下访问
+        Node? tmp_node = head.next;
+        if (tmp_node is null)
+        {
+            return -1;
+        }
+        do
+        {
+            if (get_null_switch)
+            {
+                if(tmp_node.element is null) return tmp_index;
+                tmp_index++;
+                tmp_node = tmp_node.next;
+            }
+            else
+            {
+                if(tmp_node.element is not null && tmp_node.element!.Equals(element)){
+                    return tmp_index;
+                }
+                tmp_index++;
+                tmp_node = tmp_node.next;
+            }
+            // size - 1 索引多走一段 这段判断条件可以优化一下
+        } while (tmp_node!.next is not null || tmp_index == size - 1);
+        // 这里就到末尾了
+        return -1;
+    }
+
 
     public override string ToString()
     {

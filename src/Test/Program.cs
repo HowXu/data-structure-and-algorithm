@@ -43,6 +43,12 @@ class Program
         linkedList.Remove(3);
         // a 2i b c
         Console.WriteLine(linkedList.ToString());
+        Console.WriteLine(linkedList.Get(0)!.ToString());
+        Console.WriteLine(linkedList.Get(3)!.ToString());
+        Console.WriteLine(linkedList.Get(2)!.ToString());
+        Console.WriteLine(linkedList.IndexOf(new Person(10, "2 insert")));
+        Console.WriteLine(linkedList.IndexOf(new Person(10, "a")));
+        Console.WriteLine(linkedList.IndexOf(new Person(13, "c")));
     }
 
     class Person
