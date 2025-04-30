@@ -14,9 +14,9 @@ public class LinkedList<T> where T : class?
     private class Node
     {
         // 存储元素
-        public T? element;
+        internal T? element;
         // 下一个节点 因为带头 所以可空
-        public Node? next;
+        internal Node? next;
         // 考虑需不需要index呢 C#应该是可以实现的
         public Node(T? element, Node? next)
         {

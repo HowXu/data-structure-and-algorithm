@@ -8,6 +8,6 @@
 
 Done:  
 ArrayList
+linkedList
 
 Doing:  
-LinkedList  
