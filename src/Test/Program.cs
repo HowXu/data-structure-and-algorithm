@@ -49,6 +49,21 @@ class Program
         Console.WriteLine(linkedList.IndexOf(new Person(10, "2 insert")));
         Console.WriteLine(linkedList.IndexOf(new Person(10, "a")));
         Console.WriteLine(linkedList.IndexOf(new Person(13, "c")));
+
+        Stack<Person> stack = new(persons);
+        Console.WriteLine(stack.ToString());
+        Console.WriteLine(stack.size);
+        stack.Pop();
+        stack.Pop();
+        stack.Pop();
+        Console.WriteLine(stack.size);
+        Console.WriteLine(stack.ToString());
+        stack.Push(new Person(10, "1"));
+        stack.Push(new Person(10, "2"));
+        stack.Push(new Person(10, "3"));
+        stack.Push(new Person(10, "4"));
+        Console.WriteLine(stack.ToString());
+        Console.WriteLine(stack.size);
     }
 
     class Person
