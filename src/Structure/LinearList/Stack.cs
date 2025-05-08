@@ -1,7 +1,7 @@
 namespace Structure.LinearList;
 
 // 栈是一种先入后出FILO的结构 从构造上讲 链表会更适合这种数据结构的内层
-// 但是它又是FILO的 链表走了反方向 数组显然会有扩容这样的损耗性能的操作 最好的办法是直接写一个反向链表
+// 但是它又是FILO的 链表走了反方向 数组和链表的内部各有千秋 我个人觉得链表适用范围广一些
 public class Stack<T> where T : class?
 {
     // 指向栈顶的指针
