@@ -64,6 +64,23 @@ class Program
         stack.Push(new Person(10, "4"));
         Console.WriteLine(stack.ToString());
         Console.WriteLine(stack.size);
+        Console.WriteLine("Queue");
+        Queue<Person> queue = new(persons);
+        Console.WriteLine(queue.ToString());
+        Console.WriteLine(queue.size);
+        queue.Pop();
+        queue.Pop();
+        queue.Pop();
+        Console.WriteLine(queue.size);
+        Console.WriteLine(queue.ToString());
+        queue.Offer(new Person(10, "1"));
+        queue.Offer(new Person(10, "2"));
+        queue.Pop();
+        queue.Offer(new Person(10, "3"));
+        queue.Pop();
+        queue.Offer(new Person(10, "4"));
+        Console.WriteLine(queue.ToString());
+        Console.WriteLine(queue.size);
     }
 
     class Person
