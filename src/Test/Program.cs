@@ -5,7 +5,11 @@ using Structure.LinearList;
 
 class Program
 {
-    static void Main(String[] args)
+    static void Main(String[] args){
+        LinearListRun();
+    }
+
+    static void LinearListRun()
     {
         int[] arr = [123, 1, 23, 4, 5];
         Array.Sort(arr);
@@ -25,7 +29,7 @@ class Program
 
         LinkedList<Person> linkedList = new(persons);
         Console.WriteLine(linkedList.ToString());
-        linkedList.Insert(0,new Person(10, "0 insert"));
+        linkedList.Insert(0, new Person(10, "0 insert"));
         // 0i a b c
         linkedList.Insert(3, new Person(10, "3 insert"));
         // 0i a b 3i c
