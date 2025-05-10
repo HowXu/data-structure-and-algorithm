@@ -1,3 +1,4 @@
+namespace Practice._206;
 // 反转链表
 
 // Definition for singly-linked list.

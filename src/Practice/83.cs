@@ -1,4 +1,4 @@
-namespace Practice;
+namespace Practice._83;
 // LeetCode 83 删除链表中重复元素
 // 给定链表已经排序 112233这个样子
 // ListNode函数声明
